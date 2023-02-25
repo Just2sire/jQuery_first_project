@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap.css">
+    <link rel="stylesheet" href="/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-eWb5V5I5f5pFv1naO/V/PJtLR7Kj+hLPLt0KVgYYw2eOtwcYtjKX9+T0TfTJeL0CQ+cJ2E13zpe8gzloVOsKsA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="font/css/all.css">
+    <title>W-PROJET</title>
+    <style>
+        body{
+            background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(fond7.jpg),no-repeat;
+            background-size: cover;
+            font-family: tahoma;
+        }
+    </style>
+</head>
+<body>
+    <nav class="">
+        <div class="container-fluid m-0 bg-dark text-white">
+            <div class="row">
+                <div class="col-lg text-white">
+                    <h1 class="mt-2 h1">W-PROJET</h1>
+                </div>
+                <div class="col-lg-2 offset-4 justify-content-end">
+                    <ul class="list-inline h4 mt-3 text-white">
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none p-2">HOME</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none p-2">JEU</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row" id="start">
+        <div class="col-lg-6 offset-lg-3 mt-3 p-2">
+    
+            <div class="alert alert-light col-lg" role="alert" id="container">
+                <div id="dialog">
+                    <p class="">
+                        <b>Pierre-papier-ciseaux</b> est un jeu effectué avec les mains et opposant deux joueurs. <br>
+                        Les deux joueurs choisissent simultanément un des trois coups possibles en le symbolisant de la main : <br>
+                        -Pierre <i class="fa-solid fa-hand-back-fist"></i><br>
+                        -Papier <i class="fa-solid fa-hand"></i><br>
+                        -Ciseau <i class="fa-solid fa-hand-scissors"></i><br>
+                        De façon générale, la pierre bat les ciseaux "en les émoussant", les ciseaux battent la feuille 
+                        "en la coupant", la feuille bat la pierre "en l'enveloppant". Ainsi chaque coup bat un autre coup, 
+                        fait match nul contre le deuxième "son homologue" et est battu par le troisième. <br>
+                        Le premier a gagné 10 manches remportent la partie
+                    </p>
+                </div>
+                <button type="button" class="float-end btn btn-info btn-outline-light" id="opener">Règle</button>
+                
+                <h1 class="alert-heading text-center text-decoration-underline" id="h1">/Start</h1>
+    
+                <div class="row mt-3">
+                    <article class="col-lg-4 offset-lg-1 text-center">
+                        <h3 class="">Vous</h3>
+                        <span id="myScore" class="mt-3 h2 text-center">0</span>
+                    </article>
+                    <article class="col-lg-4 offset-lg-2 text-center">
+                        <h3 class="">Ordinateur</h3>
+                        <span id="ordiScore" class="mt-3 h2 text-center">0</span>
+                    </article>
+                    <div class="result text-center h6 fst-italic mt-3"></div>
+                </div>
+                <hr>
+                <div class="form-group text-center">
+                    <button type="button" id="btn" class="btn btn-success btn-outline-light">COMMENCER</button>
+                </div>
+        
+              </div>
+            
+        </div>
+    </div>
+    
+    <div class="row" id="game">
+        <div class="col-lg-8 offset-lg-2 alert alert-success rounded p-3 d-inline-flex">
+            <div class="col-lg-3 offset-2 text-center bg-white rounded p-1">
+                <button type="button" class="btn btn-dark btn-lg px-4 my-2 py-2 myBtn" id="V1" value="1"><i class="fa-solid fa-2xl fa-hand-back-fist"></i> Pierre</button>
+                <button type="button" class="btn btn-dark btn-lg px-4 my-2 py-2 myBtn" id="V2" value="2"><i class="fa-solid fa-2xl fa-hand"></i> Papier</button>
+                <button type="button" class="btn btn-dark btn-lg px-4 my-2 py-2 myBtn" id="V3" value="3"><i class="fa-solid fa-2xl fa-hand-scissors"></i> Ciseaux</button>
+            </div>
+            <div class="col-lg-3 offset-2 text-center bg-white rounded p-1">
+                <button type="button" class="btn btn-dark btn-lg px-4 my-2 py-2 hisBtn" id="O1" value="1"><i class="fa-solid fa-2xl fa-hand-back-fist"></i> Pierre</button>
+                <button type="button" class="btn btn-dark btn-lg px-4 my-2 py-2 hisBtn" id="O2" value="2"><i class="fa-solid fa-2xl fa-hand"></i> Papier</button>
+                <button type="button" class="btn btn-dark btn-lg px-4 my-2 py-2 hisBtn" id="O3" value="3"><i class="fa-solid fa-2xl fa-hand-scissors"></i> Ciseaux</button>
+            </div>
+        </div>
+    </div>
+    <script src="jQuery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+<!-- <i class="fa-regular fa-hand-back-fist"></i>
+<i class="fa-solid fa-hand-back-fist"></i>
+<i class="fa-solid fa-hand"></i>
+<i class="fa-regular fa-hand"></i>
+<i class="fa-solid fa-hand-scissors"></i>
+<i class="fa-regular fa-hand-scissors"></i>  -->
